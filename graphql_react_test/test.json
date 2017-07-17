@@ -1,0 +1,65 @@
+
+{
+    "_meta": {
+    "sources": [
+        "./node_modules/loopback-component-passport/lib/models",
+        "loopback/common/models",
+        "loopback/server/models",
+        "../common/models",
+        "./models"
+    ],
+        "mixins": [
+        "loopback/common/mixins",
+        "loopback/server/mixins",
+        "../common/mixins",
+        "./mixins"
+    ]
+},
+    "UserProfile": {
+    "dataSource": "InMemory",
+        "public": true
+},
+    "accessToken": {
+    "dataSource": "InMemory",
+        "public": false
+},
+    "userCredential": {
+    "dataSource": "InMemory",
+        "public": false
+},
+    "userIdentity": {
+    "dataSource": "InMemory",
+        "public": false
+},
+    "UserExtended": {
+    "dataSource": "InMemory",
+        "public": true
+},
+    "User": {
+    "dataSource": "InMemory",
+        "public": false
+},
+    "AccessToken": {
+    "dataSource": "InMemory",
+        "public": false
+},
+    "ACL": {
+    "dataSource": "InMemory",
+        "public": false
+},
+    "RoleMapping": {
+    "dataSource": "InMemory",
+        "public": false,
+        "options": {
+        "strictObjectIDCoercion": true
+    }
+},
+    "Role": {
+    "dataSource": "InMemory",
+        "public": false
+},
+    "Company": {
+    "dataSource": "InMemory",
+        "public": true
+}
+}
