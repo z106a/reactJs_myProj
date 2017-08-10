@@ -1,0 +1,1 @@
+Simple Meteor.js project with faker pkg data.
