@@ -10,14 +10,14 @@ const Header = ({history}) => {
     function onBinClick(event) {
         event.preventDefault();
         Meteor.call('bins.insert', function (err, resultId) {
-            history.push(`/bins/${resultId}`);
+            history.push(`/edit/${resultId}`);
         });
     }
 
     return (
         <nav className="nav navbar-default">
             <div className="navbar-header">
-                <Link className="navbar-brand" to="/">Markbin</Link>
+                <Link className="navbar-brand" to="/">Codebin</Link>
             </div>
             <ul className="nav navbar-nav">
                 <li>

@@ -12,13 +12,19 @@ class BinsList extends Component {
         return this.props.bins.map(bin => {
             return (
                 <li className="list-group-item" key={bin._id}>
-                    <Link to={`/bins/${bin._id}`}> Bin {bin._id} </Link>
+                    <Link to={`/view/${bin._id}`}> Bin {bin._id} </Link>
                     <span className="pull-right">
-                        <button
-                            onClick={ () => this.onBinRemove(bin) }
-                            className="btn btn-danger">
-                            Remove
-                        </button>
+                        <div className="btn-group">
+                            <Link
+                                to={`/edit/${bin._id}`}
+                                className="btn btn-primary">Edit
+                            </Link>
+                            <button
+                                onClick={ () => this.onBinRemove(bin) }
+                                className="btn btn-danger">
+                                Remove
+                            </button>
+                        </div>
                     </span>
                 </li>
             )

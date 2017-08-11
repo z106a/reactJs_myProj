@@ -7,19 +7,21 @@ import BinsShare from './bins_share';
 
 class BinsMain extends Component {
     render() {
+        const edit = this.props.match.path ==="/edit/:binId";
         if (!this.props.bin) { return <div>Loading...</div> }
 
         return(
             <div>
-                <BinsEditor bin={this.props.bin} />
-                <BinsViewer bin={this.props.bin} />
-                <BinsShare bin={this.props.bin} />
+                { edit && <BinsEditor bin={this.props.bin} /> }
+                <BinsViewer bin={this.props.bin} size={edit ? "col-xs-4" : "col-xs-8"} />
+                { edit && <BinsShare bin={this.props.bin} /> }
             </div>
         );
     }
 }
 
 export default createContainer((props) => {
+
     const { binId } = props.match.params;
     Meteor.subscribe('bins');
     Meteor.subscribe('sharedBins');
