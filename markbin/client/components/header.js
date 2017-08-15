@@ -21,7 +21,7 @@ const Header = ({history}) => {
             </div>
             <ul className="nav navbar-nav">
                 <li>
-                    <Accounts/>
+                    <Accounts />
                 </li>
                 <li>
                     <a href="#" onClick={onBinClick.bind(this)}>Create Bin</a>
