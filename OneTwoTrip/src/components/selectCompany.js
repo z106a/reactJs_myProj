@@ -12,7 +12,6 @@ class SelectCompany extends Component {
     }
 
     handleChange(e) {
-        console.log(e.target.value);
         this.setState({flights: _.filter(this.props.flights, {'carrier': e.target.value })});
     }
 
